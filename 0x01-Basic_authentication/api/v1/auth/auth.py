@@ -2,13 +2,12 @@
 """ a class to manage the API authentication.
 """
 from flask import request
-from flask import List, TypeVar
+from typing import List, TypeVar
 
 
 class Auth:
-    """class for authentication
-        Return:
-            a
+    """
+    class for authentication
     """
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """ require_auth
