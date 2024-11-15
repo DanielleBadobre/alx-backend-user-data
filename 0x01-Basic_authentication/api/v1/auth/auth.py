@@ -20,6 +20,8 @@ class Auth:
             return True
         if path[-1] != '/':
             path += '/'
+        if path in excluded_paths:
+            return False
         for excluded_path in excluded_paths:
             if exculded_path == path:
                 return False
